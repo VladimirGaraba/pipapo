@@ -1,0 +1,34 @@
+<app-ppp-header [title]="'REORDER'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item lines="none" *ngFor="let i of m_items">
+      <div slot="start"><ion-checkbox mode="md"></ion-checkbox></div>
+      <!-- <ion-button slot="start" class="mr check" fill="clear">
+        <ion-icon name="square-outline"></ion-icon>
+      </ion-button> -->
+      <ion-avatar>
+        <img src="assets/images/products/product_0{{ i }}.png" />
+      </ion-avatar>
+      <ion-label text-wrap>
+        <h2>Aperol Spritz</h2>
+        <p>Lorem Ipsum is simply dummy text of the printingand trypsetting industry. Lorem Ipsum has been.</p>
+        <h2>€ {{i}}.50</h2>
+        <div>
+          <div class="counter">
+            <div>Anzahl</div>
+            <ion-button fill="outline" color="medium" (click)="onDecrease(i)"><ion-icon name="remove"></ion-icon></ion-button>
+            <ion-button fill="clear" class="num">{{m_count[''+i]}}</ion-button>
+            <ion-button fill="outline" color="medium" (click)="onIncrease(i)"><ion-icon name="add"></ion-icon></ion-button>
+          </div>
+        </div>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>
+
+<ion-footer padding>
+  <ion-button expand="block" color="main" (click)="onClickConfirm()">Wiederbestellen</ion-button>
+</ion-footer>

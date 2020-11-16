@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-button>
+        <ion-button (click)="onClose()">
+          <ion-icon name="close" color="light "></ion-icon>
+        </ion-button>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="img_cont">
+    <ion-slides pager="true" [options]="m_slideOpts">
+      <ion-slide *ngFor="let i of imageList">
+        <ion-img *ngIf="i.path" [src]="['https://pipapo-graz.at/api/'+i.path]"></ion-img>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

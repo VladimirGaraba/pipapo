@@ -1,0 +1,55 @@
+<ion-content>
+  <ion-img class="top_logo" src="./assets/images/logo.png"></ion-img>
+  <ion-img src="./assets/images/ic_serve_top.png"></ion-img>
+  <div class="item_cont">
+    <p>REGISTRIERUNG</p>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <ion-list>
+        <ion-item lines="none">
+          <ion-input placeholder="Vorname" formControlName="first_name"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input placeholder="Nachname" formControlName="surname"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input type="email" placeholder="E-Mail" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input type="password" placeholder="Passwort" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input type="password" placeholder="Passwort bestätigen" formControlName="c_password"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input type="phone" placeholder="Telefon-Nummer"></ion-input>
+        </ion-item>
+        <h4 text-center>Adresse</h4>
+        <ion-item lines="none">
+          <ion-input placeholder="Straße"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input placeholder="Hausnummer"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input placeholder="Postleitzahl"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input placeholder="Ort"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-checkbox mode="md"></ion-checkbox>
+          <ion-label text-wrap>
+            Ich habe die allgemeinen Geschäftsbedingungen von PiPaPo gelesen und erkläre mich damit einverstanden.
+          </ion-label>
+        </ion-item>
+        <ion-button shape="round" expand="block" color="main" type="submit">
+          Regstrieren
+        </ion-button>
+        <a (click)="onBackToLogin()">Haben Sie bereits ein Konto? Klicke hier!</a>
+      </ion-list>
+    </form>
+  </div>
+  <ion-img src="./assets/images/ic_serve_down.png"></ion-img>
+
+</ion-content>

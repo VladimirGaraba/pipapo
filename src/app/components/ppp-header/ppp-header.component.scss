@@ -1,0 +1,25 @@
+ion-title {
+    ion-img {
+        margin: auto;
+        height: 5.4rem;
+    }
+    &[mode='md'] {
+        text-align: left !important;
+        padding-left: 3.4rem;
+        padding-right: 1rem;
+        font-family: 'AmaticSC';
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
+    .title_double {
+        font-size: 1.0rem;
+        white-space: pre-line;
+        line-height: 0.95;
+    }
+}
+
+h3.sub_title {
+    font-family: 'Oswald';
+    font-weight: normal;
+}

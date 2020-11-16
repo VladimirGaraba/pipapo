@@ -1,0 +1,32 @@
+<app-ppp-header [title]="'Speisekarte'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-img src="assets/images/banner_00.jpg"></ion-img>
+  
+    <ion-segment mode="md" scrollable [value]="cur_seg" (ionChange)="segChange($event)" color="danger">
+      <ion-segment-button mode="md" *ngFor="let seg of m_segments" [value]="seg.id">
+        {{ seg.title }}
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <ion-list>
+
+    <ion-item *ngFor="let i of m_items">
+      <ion-avatar slot="start">
+        <img src="assets/images/products/product_0{{i}}.png" />
+      </ion-avatar>
+      <ion-label text-wrap>
+        <h2>Pizzabrot mit Knoblauchöl / A,O</h2>
+        <p>Pellentesque prestium non orci eu finibus. Bestibulum moois lorem vel libero dapibus egestas donec</p>
+        <div class="act_cont">
+          <ion-button fill="outline" [routerLink]="'/menu/order-detail'">ANPASSEN</ion-button>
+          <ion-button fill="outline" [routerLink]="'/cart'" [routerDirection]="'forward'">BESTELLEN</ion-button>
+          <h2>€ 2,00</h2>
+        </div>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

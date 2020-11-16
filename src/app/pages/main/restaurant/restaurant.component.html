@@ -1,0 +1,61 @@
+<app-ppp-header [title]="'Restaurant'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content padding>
+
+  <ion-list class="text-center">
+    <h1 class="txt_header"><ion-text color="main">PIPAPO MARKTRESAURANT</ion-text></h1>
+    <div class="c_cont">
+      <ion-button fill="clear">
+        <ion-icon name="pin"></ion-icon>
+        Brauquartier 7, 8055 Graz
+      </ion-button><br>
+      <ion-button fill="clear">
+        <ion-icon name="call"></ion-icon>
+        123-456-789
+      </ion-button><br>
+      <ion-button fill="clear" href="mailto:office@pipapo-graz.at">
+        <ion-icon name="mail"></ion-icon>
+        office@pipapo-graz.at
+      </ion-button><br>
+      <ion-button fill="clear" href="https://www.pipapo.at">
+        <ion-icon mode="md" name="globe"></ion-icon>
+        www.pipapo.at
+      </ion-button>
+    </div>
+
+    <div class="wrapper">
+      <p>Offnungszeiten:</p>
+      <p>Mo-So : 10.30 -- 22.00Uhr</p>
+    </div>
+
+    <div class="wrapper">
+      <p>Sitzplätze:</p>
+      <p>Gastraum: 80</p>
+      <p>Gastgarten: 35</p>
+      <p>Beschreibung: Bodenstandige italienische Kuche Familiares Ambiente, freundlicher Service</p>
+    </div>
+
+    <div class="wrapper">
+      <p>Bewertungen:</p>
+      <ion-rating [rate]="4.4"
+              readonly="true"
+              size="18"
+              (rateChange)="ratingChange($event)">
+      </ion-rating>
+      <p>4.3 von 513 Personen</p>
+    </div>
+
+    <ion-button expand="full" color="main">
+      Bewertungen lesen
+    </ion-button>
+
+    <div class="wrapper">
+      <p>Galerie</p>
+      <div class="gallery" scrolX="true">
+        <ion-img [src]="['https://pipapo-graz.at/api/'+item.path]" *ngFor="let item of imageList"></ion-img>
+      </div>
+    </div>
+
+  </ion-list>
+  
+</ion-content>

@@ -1,0 +1,41 @@
+<app-ppp-header [title]="'highlights, die sie nur bei uns im lokal bekommen und nicht online bestellen können.'" [action_type]="'cart'" [double_line]="true"></app-ppp-header>
+
+<ion-content> 
+  
+  <div [ngSwitch]="m_submenu">
+    <ng-container *ngFor="let list of m_cat?.menu">
+      <ion-list *ngSwitchCase="list.id" class="list-fixed">
+        <ion-item *ngFor="let item of dataList">
+          <ion-avatar slot="start">
+            <img [src]="['https://pipapo-graz.at/api/'+item.image]">
+          </ion-avatar>
+          <ion-label text-wrap>
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.description }}</p>  
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+  </div>
+
+  <div class="top_cont">
+    <ion-segment mode="md" color="danger" scrollable (ionChange)="changeSubMenu($event);" [value]="m_submenu">
+      <ion-segment-button mode="md" *ngFor="let seg of m_cat?.menu" [value]="seg.id">
+        <ion-label>{{seg.title}}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-button fill="solid" shape="round" size="small" color="danger">Download Menü PDF</ion-button>
+  </div>
+
+  <div class="share_cont">
+    <ion-button color="light" shape="round" fill="outline" size="small" (click)="onShare(1)">
+      <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+    </ion-button>
+    <ion-button color="light" shape="round" fill="outline" size="small" (click)="onShare(2)">
+      <ion-icon slot="icon-only" name="logo-instagram"></ion-icon>
+    </ion-button>
+    <ion-button color="light" shape="round" fill="outline" size="small" (click)="onShare(3)">
+      <ion-icon slot="icon-only" name="share"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

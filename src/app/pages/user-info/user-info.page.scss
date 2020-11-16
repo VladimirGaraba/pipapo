@@ -1,0 +1,73 @@
+ion-item {
+    ion-label[position='stacked'] {
+        font-size: 1.1rem;
+    }
+    ion-input {
+        border: 1px solid #eee;
+        --padding-start: .8rem;
+    }
+    &.three_item {
+        ion-input {
+            display: inline-block;
+            width: 32%;
+        }
+        .inp_cont {
+            margin-bottom: .5rem;
+            ion-input {
+                margin: 0 1%;
+            }
+            ion-input:first-child {
+                margin-left: 0;
+            }
+            ion-input:last-child {
+                margin-right: 0;
+            }
+        }
+        .inp_cont:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+ion-button[color='medium'] {
+    margin-left: 16px;
+    margin-top: 1rem;
+    width: 30%;
+}
+.sel_cont {
+    ion-icon {
+        position: absolute;
+        left: 1.6rem;
+        margin-top: .7rem;
+        font-size: 1.4rem;
+        color: #888;
+    }
+    ion-select {
+        margin: 1rem 8px .4rem 16px;
+        border: 1px solid #eee;
+        padding-right: 1rem;
+        padding-left: 2.3rem;
+        .select-icon {
+            margin-top: .3rem;
+        }
+    }
+}
+
+.addr_cont {
+    padding: 1rem 8px .3rem 16px;
+}
+
+.birth_cont {
+    width: 100%;
+    ion-item {
+        width: 31%;
+        display: inline-block;
+        border: 1px solid #eee;
+        margin-right: 3.5%;
+        ion-label {
+            margin-right: 0;
+        }
+    }
+    ion-item:last-child {
+        margin-right: 0;
+    }
+}

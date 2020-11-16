@@ -1,0 +1,42 @@
+ion-content {
+    .bonus_bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-image: url(/assets/images/bonus_bg.jpg);   
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+    }
+    ion-list {
+        background: transparent;
+        margin-top: 5vh;
+        ion-label {
+            p {
+                font-size: 6vw;
+                margin-top: 6vh;
+            }
+        }
+    }
+    ion-col {
+        text-align: center;
+    }
+    .dish {
+        display: inline-block;
+        background-image: url(/assets/images/img_dish.png);
+        background-size: cover;
+        background-position: center;
+        width: 20vw;
+        height: 20vw;
+        align-items: center;
+        justify-content: center;
+        ion-img {
+            top: 50%;
+            position: relative;
+            transform: translateY(-50%);
+        }
+    }
+}

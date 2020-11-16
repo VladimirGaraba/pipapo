@@ -1,0 +1,16 @@
+<ion-content padding>
+  <ion-list>
+    <ion-img class="top_logo" src="./assets/images/logo.png"></ion-img>
+    <ion-label>
+      <h2 class="txt_header">
+        <ion-text color="main">passwort vergessen?</ion-text>
+      </h2>
+      <p>Gib hier die E-Mail Adresse ein, um dein Passwort zuruckzusetzen</p>
+    </ion-label>
+    <ion-item lines="none">
+      <ion-input type="email" placeholder="E-Mail-Adresse"></ion-input>
+    </ion-item>
+    <ion-button color="main" shape="round" expand="block">Mein Passwort zurück zu setzen</ion-button>
+    <a (click)="onBackToLogin()">Noch nicht registriert? Klicke hier!</a>
+  </ion-list>
+</ion-content>

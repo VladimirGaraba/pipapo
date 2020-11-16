@@ -1,0 +1,12 @@
+ion-menu {
+    --ion-background-color: transparent;//var(--ion-color-primary);
+    --ion-text-color: var(--ion-color-primary-contrast);
+
+    ion-toolbar {
+        --background: transparent;
+    }
+
+    ion-list {
+        background: transparent;
+    }
+}

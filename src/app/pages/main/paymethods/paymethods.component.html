@@ -1,0 +1,75 @@
+<app-ppp-header [title]="'ZAHLUNG'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content padding>
+  <ion-toolbar>
+    <ion-label text-center>
+      <h1>€ 7.50</h1>
+    </ion-label>
+  </ion-toolbar>
+  <ion-list>
+    <ion-radio-group [value]="'credit'">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <ion-item lines="none" class="ion-no-padding">
+              <ion-img src="assets/images/pay_paypal.png"></ion-img>
+              <ion-radio mode="md" slot="start" value="paypal" checked></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item lines="none" class="ion-no-padding">
+              <ion-img src="assets/images/pay_klarna.png"></ion-img>
+              <ion-radio mode="md" slot="start" value="klarna"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col size="4">
+            <ion-item lines="none" class="ion-no-padding">
+              <ion-img src="assets/images/pay_credit.png"></ion-img>
+              <ion-radio mode="md" slot="start" value="credit"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-radio-group>
+  
+    <div class="container">
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label position="stacked">Card Number</ion-label>
+        <ion-input></ion-input>
+        <ion-img name="key"></ion-img>
+      </ion-item>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label position="stacked">Expiry date</ion-label>
+        <div class="exp_cont">
+          <ion-item lines="none">
+            <ion-label>Month</ion-label>
+            <ion-select interface="action-sheet" [value]="m_card.expire.month">
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label>Year</ion-label>
+            <ion-select interface="action-sheet" [value]="m_card.expire.year">
+              <ion-select-option value="2019">2019</ion-select-option>
+              <ion-select-option value="2020">2020</ion-select-option>
+              <ion-select-option value="2021">2021</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </ion-item>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label position="stacked">Security Code</ion-label>
+        <ion-input></ion-input>
+        <ion-img name="key"></ion-img>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label text-wrap>
+          <p class="f-opensans">Lorem ipsum dolor sit amet, consectetur adipiscing elit. urabitur pulvinar bibendum malesuada. Suspendisse potenti.</p>
+        </ion-label>
+      </ion-item>
+    </div>
+    <ion-button expand="block" color="main" (click)="onDone()">Kostenpflichtig bestellen</ion-button>
+  </ion-list>
+</ion-content>

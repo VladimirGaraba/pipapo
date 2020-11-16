@@ -1,0 +1,50 @@
+ion-button[expand='block'] {
+    --border-radius: 0;
+    margin: 0;
+    margin-top: 1.5rem;
+}
+
+ion-radio {
+    margin-right: .4rem;
+}
+
+.container {
+    border: 1px solid #eee;
+    padding: .5rem .5rem 1rem .5rem;
+}
+.exp_cont {
+    width: 100%;
+    display: flex;
+    ion-item {
+        width: 49%;
+        border: 1px solid #eee;
+        margin-right: 2%;
+        ion-label {
+            color: #888;
+        }
+        ion-select {
+            width: 100%;
+        }
+    }
+    ion-item:last-of-type {
+        margin-right: 0;
+    }
+}
+
+ion-item {
+    ion-label[position='stacked'] {
+        font-size: 1rem;
+    }
+    ion-input {
+        border: 1px solid #eee;
+    }
+    &.ion-no-padding {
+        --padding-start: 8px;
+    }
+}
+
+ion-toolbar {
+    h1 {
+        font-weight: bold;
+    }
+}

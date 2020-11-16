@@ -1,0 +1,17 @@
+<app-ppp-header [title]="'STARTSEITE'" [action_type]="'setting'"></app-ppp-header>
+
+<ion-content [ngClass]="'has_bg'">
+    <div class="app_bg"></div>
+    <ion-list>
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size-xs="6" size-sm="4" size-md="3" size-lg="2" *ngFor="let item of m_items">
+                    <div class="item_cont_circle" [routerLink]="item.route">
+                        <i class="icon {{item.icon}}"></i>
+                    </div>
+                    <p>{{ item.title }}</p>
+                </ion-col> 
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+</ion-content>

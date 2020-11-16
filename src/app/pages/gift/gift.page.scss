@@ -1,0 +1,12 @@
+ion-content {
+    --overflow: hidden;
+    ion-list {
+        text-align: center;
+        ion-img {
+            height: 25vh;
+        }
+        h2, p {
+            margin: 1.2rem auto;
+        }
+    }
+}

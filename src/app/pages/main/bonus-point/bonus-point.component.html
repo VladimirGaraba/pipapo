@@ -1,0 +1,27 @@
+<app-ppp-header [title]="'Bonuspunkte'" [action_type]="'setting'"></app-ppp-header>
+
+<ion-content>
+  <div class="app_bg"></div>
+  <div class="main_cont">
+    <div class="prog_wrapper">
+      <!-- <ion-img *ngIf="m_isImage" [src]="m_url"></ion-img> -->
+      <circle-progress
+        [percent]="m_bonusPoint"
+        [radius]="100"
+        [animation]="true"
+        [showSubtitle]="false"
+        [showTitle]="false"
+        [showUnits]="false"
+        [outerStrokeWidth]="4"
+        [innerStrokeWidth]="4"
+        [outerStrokeColor]="'red'"
+        [space]="-4"
+        [innerStrokeColor]="'lightgray'"
+
+        [routerLink]="'/menu/bonus-result'"
+        ></circle-progress>
+      <ion-button fill="clear" shape="round" (click)="onClickScan()"></ion-button>
+    </div>
+    <p class="text-center">Ihre Bonus-Punkte: {{ m_bonusPoint }}</p>
+  </div>
+</ion-content>

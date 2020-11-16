@@ -1,0 +1,70 @@
+
+.icon_bonus_point {
+    mask: url("/assets/icon/icon_bonus_point.png");
+}
+.icon_reorder {
+    mask: url("/assets/icon/icon_reorder.png");
+}
+.icon_order {
+    mask: url("/assets/icon/icon_order.png");
+}
+.icon_contact_us {
+    mask: url("/assets/icon/icon_contact_us.png");
+}
+.icon_gallery {
+    mask: url("/assets/icon/icon_gallery.png");
+}
+.icon_restaurant {
+    mask: url("/assets/icon/icon_restaurant.png");
+}
+.icon_profile {
+    mask: url("/assets/icon/icon_profile.png");
+}
+
+.icon_cat_01 {
+    mask: url("/assets/images/category/cat_01.png");
+}
+.icon_cat_02 {
+    mask: url("/assets/images/category/cat_02.png");
+}
+.icon_cat_03 {
+    mask: url("/assets/images/category/cat_03.png");
+}
+.icon_cat_04 {
+    mask: url("/assets/images/category/cat_04.png");
+}
+.icon_cat_05 {
+    mask: url("/assets/images/category/cat_05.png");
+}
+.icon_cat_06 {
+    mask: url("/assets/images/category/cat_06.png");
+}
+.icon_cat_07 {
+    mask: url("/assets/images/category/cat_07.png");
+}
+.icon_cat_08 {
+    mask: url("/assets/images/category/cat_08.png");
+}
+.icon_cat_09 {
+    mask: url("/assets/images/category/cat_09.png");
+}
+.icon_cat_10 {
+    mask: url("/assets/images/category/cat_10.png");
+}
+.icon_cat_11 {
+    mask: url("/assets/images/category/cat_11.png");
+}
+
+.icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: gray;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.icon:hover {
+    background: var(--ion-color-main);
+}

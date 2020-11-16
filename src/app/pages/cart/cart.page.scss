@@ -1,0 +1,35 @@
+.info_cont {
+    h2 {
+        border-bottom: 1px dashed gray;
+        margin-bottom: .4rem;
+        padding-bottom: .4rem;
+    }
+    
+    p {
+        background-color: #e4e3d6;
+        padding: .3rem .2rem;
+        span:last-child {
+            float: right;
+        }
+    }
+}
+
+ion-footer {
+    position: fixed;
+    bottom: 0;
+    padding: .3rem 16px;
+    background: white;
+    ion-button[fill='clear'] {
+        --padding-start: 0;
+    }
+    ion-button {
+        --border-radius: 0;
+    }
+}
+
+ion-item.check_item {
+    --padding-start: .4rem;
+    ion-checkbox {
+        margin-right: .6rem;
+    }
+}

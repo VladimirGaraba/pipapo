@@ -1,0 +1,21 @@
+.list-ios .item-lines-none {
+    --padding-start: .3rem;    
+    --inner-border-width: 1px;
+    --inner-padding-start: 1rem;
+    ion-avatar {
+        margin-right: 1rem;
+    }
+    ion-button.check {
+        font-size: 1.7rem;
+        --color: #999;
+        --padding-start: 0;
+        --padding-end: 0;
+    }
+    margin-bottom: .4rem;
+}
+
+ion-footer {
+    ion-button {
+        --border-radius: 0;
+    }
+}

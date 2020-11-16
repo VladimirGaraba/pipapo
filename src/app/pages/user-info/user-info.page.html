@@ -1,0 +1,75 @@
+<app-ppp-header [title]="'PERSÖNLICHE DATEN'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label position="stacked">Vorname:</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Nachname:</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <div class="sel_cont">
+      <ion-icon [name]="m_user.gender"></ion-icon>
+      <ion-select interface="popover" (ionChange)="onChangeGender($event)" [value]="m_user.gender">
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+      </ion-select>
+    </div>
+
+    <ion-item lines="none" class="three_item">
+      <ion-label position="stacked">Geburtsdatum:</ion-label>
+      <div class="birth_cont">
+        <!-- <ion-input type="number" placeholder="DD:"></ion-input>
+        <ion-input type="number" placeholder="MM:"></ion-input>
+        <ion-input type="number" placeholder="YEAR:"></ion-input> -->
+        <ion-item lines="none">
+          <ion-label>D:</ion-label>
+          <ion-datetime display-format="DD" picker-format="DD" [(ngModel)]="m_user.birthday"></ion-datetime>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>M:</ion-label>
+          <ion-datetime display-format="MM" picker-format="MM" [(ngModel)]="m_user.birthday"></ion-datetime>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Y:</ion-label>
+          <ion-datetime display-format="YYYY" picker-format="YYYY" [(ngModel)]="m_user.birthday"></ion-datetime>
+        </ion-item>
+      </div>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Email:</ion-label>
+      <ion-input type="email" plceholder="max.mustermann@gmx.at"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Adresse:</ion-label>
+      <ion-input type="text" plceholder=""></ion-input>
+    </ion-item>
+    <!-- <div class="addr_cont">
+      <ion-segment mode="md" [value]="m_addr" color="main" (ionChange)="onChangeAddr($event)" scrollable>
+        <ion-segment-button mode="md" value="addr1">LIEFERADRESSE 1</ion-segment-button>
+        <ion-segment-button mode="md" value="addr2">LIEFERADRESSE 2</ion-segment-button>
+      </ion-segment>
+    </div> -->
+    <ion-item lines="none" class="three_item">
+      <ion-label position="stacked">Firma/Name:</ion-label>
+      <div class="inp_cont">
+        <ion-input placeholder="Strasse:"></ion-input>
+        <ion-input placeholder="Hausnummer:"></ion-input>
+        <ion-input placeholder="Türnummer:"></ion-input>
+      </div>
+      <div class="inp_cont">
+        <ion-input placeholder="Zusatz:"></ion-input>
+        <ion-input placeholder="PLZ:"></ion-input>
+        <ion-input placeholder="Ort:"></ion-input>
+      </div>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked">Land:</ion-label>
+      <ion-input placeholder="Österreich"></ion-input>
+    </ion-item>
+    <ion-button shape="round" color="medium">EINREICHEN</ion-button>
+  </ion-list>
+</ion-content>

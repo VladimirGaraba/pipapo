@@ -1,0 +1,19 @@
+.act_cont {
+    ion-button {
+        --border-width: 1px .35rem 1px 1px;
+        --border-color: darkgrey var(--ion-color-main) darkgray darkgray;
+        --border-radius: .2rem; 
+    }
+    h2 {
+        float: right;
+        margin-top: 0.34rem;
+        margin-right: .1rem;
+    }
+}
+
+ion-segment {
+    ion-segment-button {
+        --padding-top: .5rem;
+        --padding-bottom: .1rem;
+    }
+}

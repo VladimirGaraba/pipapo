@@ -1,0 +1,61 @@
+<app-ppp-header [title]="'Warenkorb'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/images/products/product_02.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Aperol Spritz</h2>
+        <p>Lorem Ipsum is simply dummy text of the printingand trypsetting industry. Lorem Ipsum has been.</p>
+        <h2>¢7.50</h2>
+        <div>
+          <div class="counter">
+            <div>Anzahl</div>
+            <ion-button fill="outline" color="medium" (click)="onDecrease(1)"><ion-icon name="remove"></ion-icon></ion-button>
+            <ion-button fill="clear" class="num">{{ m_count['1'] }}</ion-button>
+            <ion-button fill="outline" color="medium" (click)="onIncrease(1)"><ion-icon name="add"></ion-icon></ion-button>
+          </div>
+        </div>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/images/products/product_05.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Aperol Spritz</h2>
+        <p>Lorem Ipsum is simply dummy text of the printingand trypsetting industry. Lorem Ipsum has been.</p>
+        <h2>¢7.50</h2>
+        <div>
+          <div class="counter">
+            <div>Anzahl</div>
+            <ion-button fill="outline" color="medium" (click)="onDecrease(2)"><ion-icon name="remove"></ion-icon></ion-button>
+            <ion-button fill="clear" class="num">{{ m_count['2'] }}</ion-button>
+            <ion-button fill="outline" color="medium" (click)="onIncrease(2)"><ion-icon name="add"></ion-icon></ion-button>
+          </div>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-footer>
+    <ion-label class="info_cont">
+      <h2>Ihre Bestellung</h2>
+      <p>
+        <span>Trinkgeld</span>
+        <span [contentEditable]="true">€2.00</span>
+      </p>
+      <p>
+        <span>Summe</span>
+        <span>€50.00</span>
+      </p>
+    </ion-label>
+    <ion-item lines="none" class="check_item">
+      <ion-checkbox mode="md" (ionChange)="onCheck($event)"></ion-checkbox>
+      <ion-label>Vorbestellung</ion-label>
+    </ion-item>
+    <ion-button expand="block" color="danger" (click)="onPayment()">Bestellen</ion-button>
+  </ion-footer>
+</ion-content>

@@ -1,0 +1,16 @@
+<app-ppp-header [title]="'SPEISEN BESTELLEN'" [action_type]="'setting'"></app-ppp-header>
+
+<ion-content>
+    <div class="app_bg"></div>
+    <ion-grid>
+        <ion-row align-items-center>
+            <ion-col class="item_wrap" size-xs="4" size-sm="3" size-md="2" size-lg="1" *ngFor="let item of dataList">
+                <div class="item_cont_circle" (click)="showDetail(item);">
+                    <!-- <i class="icon {{item.icon_name}}"></i> -->
+                    <ion-img [src]="['https://pipapo-graz.at/api/'+item.icon]" style="height: 50%; width: 50%;"></ion-img>
+                </div>
+                <p>{{ item.name }}</p>
+            </ion-col> 
+        </ion-row>
+    </ion-grid>
+</ion-content>

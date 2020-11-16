@@ -1,0 +1,42 @@
+<app-ppp-header [title]="'Speisekarte'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-img src="assets/images/banner_00.jpg"></ion-img>
+    <ion-item class="ion-no-padding">
+      <ion-label class="info" text-wrap text-center>
+        <h2>Pizza Prosciutto</h2>
+        <h2><ion-text color="main">€ 7,50</ion-text></h2>
+        <p>Tomatensauce, Mozzarella, Gouda, Oregano, gekochter Pizzaschinken</p>
+        <h4>A, G, O</h4>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding">
+      <ion-label position="stacked">Größe:</ion-label>
+      <ion-select [value]="'2'">
+        <ion-select-option value="1">value 1</ion-select-option>
+        <ion-select-option value="2">value 2</ion-select-option>
+        <ion-select-option value="3">value 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let i of m_items">
+          <ion-item lines="none">
+            <ion-checkbox mode="md" color="main">
+            </ion-checkbox>
+            <ion-label>
+              {{ i.name }}
+              <span float-right>€{{ i.price }}</span>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <ion-footer>
+    <ion-button color="main" expand="full" (click)="onPayment()">Bestellen</ion-button>
+  </ion-footer>
+</ion-content>

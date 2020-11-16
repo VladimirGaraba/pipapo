@@ -1,0 +1,73 @@
+<app-ppp-header [title]="'EINSTELLUNGEN'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content padding>
+  <ion-segment (ionChange)="chageType($event)" [value]="m_type" color="dark">
+    <ion-segment-button value="contact">
+      <ion-label>Kontaktiere uns</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="data-protect">
+      <ion-label>Datenschutzerklarung</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- Contact Us part -->
+  <div class="item_cont" *ngIf="m_type == 'contact'">
+    <h2 text-center>
+      <ion-text color="main">Kontaktiere uns</ion-text>
+    </h2>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Location"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input type="phone" placeholder="Phone Number"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input type="email" placeholder="E-Mail"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input placeholder="Website"></ion-input>
+      </ion-item>
+      <ion-button shape="round" expand="block" color="main" (click)="onSave('contact')">
+        Speichern
+      </ion-button>
+    </ion-list>
+  </div>
+  <!-- Data project part -->
+  <div class="item_cont" *ngIf="m_type == 'data-protect'">
+    <h2 text-center>
+      <ion-text color="main">Passwort ändern</ion-text>
+    </h2>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-input type="password" placeholder="Altes Passwort"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input type="password" placeholder="Neues Passwort"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input type="password" placeholder="Neues Passwort Wiederholen"></ion-input>
+      </ion-item>
+      <ion-button shape="round" expand="block" color="main" (click)="onSave('data-protect')">
+        Speichern
+      </ion-button>
+    </ion-list>
+    <h2 text-center>
+      <ion-text color="main">Push-Notification</ion-text>
+    </h2>
+    <ion-list>
+      <ion-item>
+        <ion-label>Rabatte & Aktionen</ion-label>
+        <ion-toggle position="end" color="success"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Neue Speisen & Getranke</ion-label>
+        <ion-toggle position="end" color="success"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>News</ion-label>
+        <ion-toggle position="end" color="success"></ion-toggle>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

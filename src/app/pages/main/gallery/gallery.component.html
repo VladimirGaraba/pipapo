@@ -1,0 +1,11 @@
+<app-ppp-header [title]="'Galerie'" [action_type]="'cart'"></app-ppp-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="6" size-sm="4" size-md="3" size-lg="2" *ngFor="let item of imageList" (click)="showDetail(item.id)">
+        <ion-img *ngIf="item.path" [src]="['https://pipapo-graz.at/api/'+item.path]"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-content padding>
+  
+  <ion-label>
+    <h1><ion-text color="main">Select Delivery time</ion-text></h1>
+    <h2>Bei Vorbestellung müssen Sie per Vorauskassa zahlen</h2>
+  </ion-label>
+
+  <ion-item>
+    <ion-label>Datum:</ion-label>
+    <ion-datetime display-format="MMM DD, YYYY" picker-format="MMM DD, YYYY" [(ngModel)]="m_delivery_datetime"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Zeit:</ion-label>
+    <ion-datetime display-format="h:mm A" picker-format="h:mm A" [(ngModel)]="m_delivery_datetime"></ion-datetime>
+  </ion-item>
+
+  <ion-button color="main" (click)="onClose()">Bestätigen</ion-button>
+
+</ion-content>

@@ -1,0 +1,25 @@
+ion-content {
+    --overflow: auto;
+    .item_cont {
+        margin-top: 1.5rem;
+        margin-bottom: 5vh;
+        ion-list {
+            padding-top: .5rem;
+        }
+        h2 {
+            &[text-center] {
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+    }
+    ion-segment-button {
+        height: 40px;
+        --border-radius: 20px;
+        font-size: 1.1rem;
+    }
+    ion-segment {
+        width: 80vw;
+        margin: auto;
+    }
+}
